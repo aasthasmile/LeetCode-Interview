@@ -1,17 +1,19 @@
 package a.level.Easy;
 
+
 class InvertBinaryTree {
 
 	public static void main(String[] args) {
-		Treenode root = new Treenode(4);
-		root.left = new Treenode(7);
-		root.right = new Treenode(1);
-		root.left.left = new Treenode(9);
-		root.left.right = new Treenode(8);
+		TreeNode root = new TreeNode(4);
+		root.left = new TreeNode(7);
+		root.right = new TreeNode(1);
+		root.left.left = new TreeNode(9);
+		root.left.right = new TreeNode(8);
 		System.out.println(invertTree(root));
 	}
 
-	public static Treenode invertTree(Treenode root) {
+	public static TreeNode invertTree(TreeNode root) {
+		
 		if (root == null)
 			return null;
 		else {
@@ -23,8 +25,8 @@ class InvertBinaryTree {
 
 	}
 
-	private static void Swap(Treenode left, Treenode right) {
-		Treenode temp = left;
+	private static void Swap(TreeNode left, TreeNode right) {
+		TreeNode temp = left;
 		left = right;
 		right = temp;
 	}

@@ -13,15 +13,15 @@ package a.level.Easy;
 public class maximumDepth {
 
 	public static void main(String[] args) {
-		Treenode root = new Treenode(3);
-		root.left = new Treenode(4);
-		root.right = new Treenode(3);
-		root.left.left = new Treenode(8);
+		TreeNode root = new TreeNode(3);
+		root.left = new TreeNode(4);
+		root.right = new TreeNode(3);
+		root.left.left = new TreeNode(8);
 		System.out.println(maxDepth(root));
 
 	}
 
-	public static int maxDepth(Treenode root) {
+	public static int maxDepth(TreeNode root) {
 		if (root == null)
 			return 0;
 

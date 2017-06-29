@@ -3,6 +3,8 @@ package a.level.Easy;
 public class MaxConsecutiveOnes {
 
 	public static void main(String[] args) {
+		
+		System.out.println((Math.log10(3)/Math.log10(3))%1 == 0);
 		findMaxConsecutiveOnes(new int[] { 1, 1, 0, 1, 1, 1 });
 
 	}
@@ -18,6 +20,7 @@ public class MaxConsecutiveOnes {
 				counter = 0;
 			}
 
+			
 		}
 		return max;
 	}

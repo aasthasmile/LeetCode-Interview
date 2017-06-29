@@ -19,16 +19,16 @@ public class reverseString2 {
 	public static String reverseStr(String str, int k) {
 
 		String[] s = str.split("");
-		StringBuilder sb = new StringBuilder();
+
 		int start = 0, end = 0;
 
 		/*
-		 * I am trying to reverse i to i+k-1 elements in string using Swap Inplace algorithm.
-		 * Constant space complexity.
+		 * I am trying to reverse i to i+k-1 elements in string using Swap
+		 * Inplace algorithm. Constant space complexity.
 		 */
 		for (int i = 0; i < s.length; i = i + 2 * k) {
 			start = i;
-			end = i + k - 1;
+			end = Math.min(i + k - 1, s.length - 1);
 			while (start < end) {
 				String temp = s[start];
 				s[start] = s[end];
@@ -37,7 +37,8 @@ public class reverseString2 {
 				end--;
 			}
 		}
-		return s.toString();
+		
+		return String.join("", s);
 
 	}
 
